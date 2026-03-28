@@ -21,7 +21,7 @@ export default function CalendarWidget() {
   const loadEvents = async () => {
     try {
       const data = await api.getCalendar();
-      setEvents(data);
+      setEvents(data as CalendarEvent[]);
     } catch (error) {
       console.error('Error loading calendar:', error);
     } finally {
