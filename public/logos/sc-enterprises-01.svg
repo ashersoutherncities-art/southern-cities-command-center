@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Define gradient for premium look -->
+  <defs>
+    <linearGradient id="navyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f3f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003d70;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f25a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle accent -->
+  <circle cx="60" cy="60" r="55" fill="url(#navyGradient)" opacity="0.1"/>
+
+  <!-- SC monogram -->
+  <g>
+    <!-- Outer hexagon border (construction theme) -->
+    <polygon points="60,15 85,27.5 85,52.5 60,65 35,52.5 35,27.5" 
+             fill="none" stroke="url(#navyGradient)" stroke-width="2"/>
+    
+    <!-- S letter -->
+    <path d="M 45 50 Q 50 45 55 45 Q 60 45 60 50 Q 60 55 55 57 L 55 57 Q 60 57 60 62 Q 60 67 55 70 Q 50 72 45 70" 
+          fill="url(#navyGradient)" stroke="none"/>
+    
+    <!-- C letter -->
+    <path d="M 70 45 L 65 45 Q 60 45 60 50 L 60 70 Q 60 75 65 75 L 70 75" 
+          fill="none" stroke="url(#orangeGradient)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Company Name -->
+  <text x="120" y="55" font-family="serif" font-size="32" font-weight="bold" fill="#001f3f">
+    Southern Cities
+  </text>
+  <text x="120" y="80" font-family="serif" font-size="18" letter-spacing="3" fill="#ff6b35">
+    ENTERPRISES
+  </text>
+
+  <!-- Tagline -->
+  <text x="120" y="100" font-family="sans-serif" font-size="11" fill="#666" letter-spacing="1">
+    CONSTRUCTION • REAL ESTATE • DEVELOPMENT
+  </text>
+</svg>
