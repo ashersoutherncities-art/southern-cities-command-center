@@ -36,8 +36,8 @@ export default function WeightTrackerWidget({ onUpdate }: { onUpdate?: () => voi
         api.getWeightStats(),
         api.getWeightEntries(timeframe),
       ]);
-      setStats(statsData);
-      setEntries(entriesData);
+      setStats(statsData as WeightStats);
+      setEntries(entriesData as WeightEntry[]);
     } catch (error) {
       console.error('Error loading weight data:', error);
     } finally {
