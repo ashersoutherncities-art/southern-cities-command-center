@@ -24,7 +24,7 @@ export default function HabitTrackerWidget({ onUpdate }: { onUpdate?: () => void
   const loadHabits = async () => {
     try {
       const data = await api.getTodayHabits();
-      setHabits(data);
+      setHabits(data as Habit[]);
     } catch (error) {
       console.error('Error loading habits:', error);
     } finally {

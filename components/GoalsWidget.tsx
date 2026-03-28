@@ -25,7 +25,7 @@ export default function GoalsWidget({ onUpdate }: { onUpdate?: () => void }) {
   const loadGoals = async () => {
     try {
       const data = await api.getGoals(filter === 'all' ? {} : { timeframe: filter });
-      setGoals(data);
+      setGoals(data as Goal[]);
     } catch (error) {
       console.error('Error loading goals:', error);
     } finally {

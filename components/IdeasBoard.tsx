@@ -24,7 +24,7 @@ export default function IdeasBoard({ onUpdate }: { onUpdate?: () => void }) {
   const loadIdeas = async () => {
     try {
       const data = await api.getIdeas();
-      setIdeas(data);
+      setIdeas(data as Idea[]);
     } catch (error) {
       console.error('Error loading ideas:', error);
     } finally {

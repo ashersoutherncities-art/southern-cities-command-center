@@ -22,7 +22,7 @@ export default function DealsWidget() {
   const loadDeals = async () => {
     try {
       const data = await api.getDeals();
-      setDeals(data);
+      setDeals(data as Deal[]);
     } catch (error) {
       console.error('Error loading deals:', error);
     } finally {

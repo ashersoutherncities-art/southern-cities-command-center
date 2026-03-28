@@ -25,7 +25,7 @@ export default function ProjectsWidget({ onUpdate }: { onUpdate?: () => void }) 
   const loadProjects = async () => {
     try {
       const data = await api.getProjects({ status: 'active' });
-      setProjects(data);
+      setProjects(data as Project[]);
     } catch (error) {
       console.error('Error loading projects:', error);
     } finally {

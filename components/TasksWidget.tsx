@@ -25,7 +25,7 @@ export default function TasksWidget({ onUpdate }: { onUpdate?: () => void }) {
   const loadTasks = async () => {
     try {
       const data = await api.getTasks({ status: 'pending' });
-      setTasks(data);
+      setTasks(data as Task[]);
     } catch (error) {
       console.error('Error loading tasks:', error);
     } finally {

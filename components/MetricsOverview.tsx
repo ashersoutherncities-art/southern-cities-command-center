@@ -14,7 +14,7 @@ export default function MetricsOverview() {
   const loadMetrics = async () => {
     try {
       const data = await api.getMetrics();
-      setMetrics(data);
+      setMetrics(data as Metric[]);
     } catch (error) {
       console.error('Error loading metrics:', error);
     } finally {

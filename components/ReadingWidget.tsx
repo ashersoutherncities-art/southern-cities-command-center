@@ -38,8 +38,8 @@ export default function ReadingWidget({ onUpdate }: { onUpdate?: () => void }) {
         api.getBooks({ status: activeTab === 'reading' ? 'reading' : activeTab === 'finished' ? 'finished' : 'to-read' }),
         api.getReadingStats(),
       ]);
-      setBooks(booksData);
-      setStats(statsData);
+      setBooks(booksData as Book[]);
+      setStats(statsData as ReadingStats);
     } catch (error) {
       console.error('Error loading reading data:', error);
     } finally {
